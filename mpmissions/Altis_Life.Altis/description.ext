@@ -73,9 +73,9 @@ class CfgDebriefing
 {
 	class NotWhitelisted
 	{
-		title = "Mission Failed";
+		title = "Join Slot Failed";
 		subtitle = "You are not white-listed to use this slot";
-		description = "You are not allowed to use this slot because you do not have the appropriate permissions, try another slot.";
+		description = "You are not allowed to use this slot because you do not have the appropriate permissions, try another slot or contact a Staff member if you believe this is an issue.";
 		pictureBackground = "";
 		picture = "";
 		pictureColor[] = {0,0.3,0.6,1};
@@ -83,14 +83,23 @@ class CfgDebriefing
 
 	class Blacklisted
 	{
-		title = "Mission Failed";
-		subtitle = "You are blacklisted from cops";
-		description = "You are not allowed to be a cop due to previous actions and the admins have removed you from being a cop.";
+		title = "Join Slot Failed";
+		subtitle = "You have been cop-side banned!";
+		description = "You are no longer allowed to be a Cop due to previous actions.";
 		pictureBackground = "";
 		picture = "";
 		pictureColor[] = {0,0.3,0.6,1};
 	};
-
+	
+	class ReservedSlot
+	{
+		title = "Join Slot Failed";
+		subtitle = "This is a reserved slot";
+		description = "You are not allowed to use this slot because it is reserved for Arma 3 Life Administrators only";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
 	class SpyGlass
 	{
 		title = "The SpyGlass sees you";
