@@ -2,7 +2,7 @@
 #define false 0
 
 class DefaultEventhandlers;
-class CfgPatches 
+class CfgPatches
 {
 	class life_server
 	{
@@ -10,7 +10,7 @@ class CfgPatches
 		weapons[] = {};
 		requiredAddons[] = {"A3_Data_F","A3_Soft_F","A3_Soft_F_Offroad_01","A3_Characters_F"};
 		fileName = "life_server.pbo";
-		author[]= {"Tonic"}; 
+		author[]= {""}; 
 	};
 };
 
@@ -21,9 +21,9 @@ class CfgServerSettings
 	class extDB
 	{
 		/*Database Selection*/
-		Database = "AltisLife"; //Database config name
+		Database = "arma3life"; //Database config name
 		/*RCON Settings*/
-		RCON = false; //Enabled?
+		RCON = true; //Enabled?
 		RCON_Selection = "RCON"; //Selection of what RCON config to pull from the extDB Configuration file eg. [RCON]
 		/*VAC Settings*/
 		VAC = false; //Enabled? If you want to ban VAC'd players, edit it in the extDB Configuration file.
@@ -60,7 +60,7 @@ class CfgFunctions
 			class missionTimeLeft{};
 		};
 	};
-	
+
 	class MySQL_Database
 	{
 		tag = "DB";
@@ -78,7 +78,7 @@ class CfgFunctions
 			class updatePartial {};
 		};
 	};
-	
+
 	class Life_System
 	{
 		tag = "life";
@@ -93,19 +93,19 @@ class CfgFunctions
 			class wantedCrimes {};
 			class wantedProfUpdate {};
 		};
-		
+
 		class Jail_Sys
 		{
 			file = "\life_server\Functions\Jail";
 			class jailSys {};
 		};
-		
+
 		class Client_Code
 		{
 			file = "\life_server\Functions\Client";
 		};
 	};
-	
+
 	class TON_System
 	{
 		tag = "TON";
@@ -131,7 +131,7 @@ class CfgFunctions
 			class setObjVar {};
 			class keyManagement {};
 		};
-		
+
 		class Housing
 		{
 			file = "\life_server\Functions\Housing";
@@ -144,7 +144,7 @@ class CfgFunctions
 			class houseCleanup {};
 			class preCheckHouse {};
 		};
-		
+
 		class Gangs
 		{
 			file = "\life_server\Functions\Gangs";
@@ -171,7 +171,7 @@ class CfgVehicles
 	{
 		class EventHandlers;
 	};
-	
+
 	class C_man_1 : Civilian_F
 	{
 		class EventHandlers: EventHandlers

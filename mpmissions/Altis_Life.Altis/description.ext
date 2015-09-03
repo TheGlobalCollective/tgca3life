@@ -1,6 +1,6 @@
 #include "infiSTAR_AdminMenu.hpp"
 
-author = "Does it look like I give a fuck?";
+author = "The Global Collective";
 onLoadName = "Arma 3 Life: Jackson County";
 onLoadMission = "by The Global Collective";
 joinUnassigned = 1;
