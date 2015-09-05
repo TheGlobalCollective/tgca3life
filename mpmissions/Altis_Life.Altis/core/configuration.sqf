@@ -1,12 +1,12 @@
 #include <macro.h>
-/*
-	Master Life Configuration File
-	This file is to setup variables for the client, there are still other configuration files in the system
 
-*****************************
-****** Backend Variables *****
-*****************************
-*/
+	//Master Life Configuration File
+	//This file is to setup variables for the client, there are still other configuration files in the system
+
+//******************************//
+//****** Backend Variables *****//
+//******************************//
+
 life_query_time = time;
 life_action_delay = time;
 life_trunk_vehicle = Objnull;
@@ -23,7 +23,7 @@ life_bail_paid = false;
 life_impound_inuse = false;
 life_action_inUse = false;
 life_spikestrip = ObjNull;
-life_respawn_timer = 0.1; //Scaled in minutes
+life_respawn_timer = 5; //Scaled in minutes, default is 5
 life_knockout = false;
 life_interrupted = false;
 life_respawned = false;
@@ -36,21 +36,20 @@ tawvd_addon_disable = true;
 
 //Uniform price (0),Hat Price (1),Glasses Price (2),Vest Price (3),Backpack Price (4)
 life_clothing_purchase = [-1,-1,-1,-1,-1];
-/*
-*****************************
-****** Weight Variables *****
-*****************************
-*/
+
+//*****************************//
+//****** Weight Variables *****//
+//*****************************//
+
 life_maxWeight = LIFE_SETTINGS(getNumber,"total_maxWeight");
 life_maxWeightT = LIFE_SETTINGS(getNumber,"total_maxWeightT");
 life_carryWeight = 0; //Represents the players current inventory weight (MUST START AT 0).
 
-/*
-*****************************
-****** Life Variables *******
-*****************************
-*/
-life_net_dropped = false;
+//*****************************//
+//****** Life Variables *******//
+//*****************************//
+
+life_net_dropped = false; //??
 life_use_atm = true;
 life_is_arrested = false;
 life_delivery_in_progress = false;
@@ -62,25 +61,32 @@ life_istazed = false;
 life_vehicles = [];
 
 switch (playerSide) do {
+
+	/*case example: { //Faction
+		BANK = -; //Starting Bank Money -- $10,000 is default
+		life_paycheck = -; //Paycheck Amount
+	};*/
+	
 	case west: {
-		BANK = 7000; //Starting Bank Money
-		life_paycheck = 500; //Paycheck Amount
+		BANK = 5000000; 
+		life_paycheck = 1;
 	};
 	
 	case civilian: {
-		BANK = 3000; //Starting Bank Money
-		life_paycheck = 350; //Paycheck Amount
+		BANK = 5000000; 
+		life_paycheck = 1;
 	};
 	
 	case independent: {
-		BANK = 6500;
-		life_paycheck = 450;
+		BANK = 5000000; 
+		life_paycheck = 1;
 	};
 };
 
 /*
 	Master Array of items?
 */
+
 //Setup variable inv vars.
 {
 	SVAR_MNS [ITEM_VARNAME(configName _x),0];
