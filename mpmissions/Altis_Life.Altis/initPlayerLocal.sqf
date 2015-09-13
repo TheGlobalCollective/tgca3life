@@ -8,12 +8,12 @@
 if(!hasInterface) exitWith {}; //This is a headless client, he doesn't need to do anything but keep being headless..
 #define CONST(var1,var2) var1 = compileFinal (if(typeName var2 == "STRING") then {var2} else {str(var2)})
 CONST(BIS_fnc_endMission,BIS_fnc_endMission);
-while {true} do {
+/*while {true} do {
 
 	_ctrl = (findDisplay 49) displayCtrl 1010;
 	_ctrl ctrlEnable false;
 
-};
+};*/
 [] execVM "core\init.sqf";
 
 //Execute JIP code.
